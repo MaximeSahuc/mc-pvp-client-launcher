@@ -146,20 +146,16 @@ def start_custom_version(version_name, game_version, username):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Python Minecraft Launcher')
-
-    parser.add_argument('--version', type=str, required=True)
     parser.add_argument('--username', type=str, required=True)
-    parser.add_argument('--uuid', type=str, default='0')
-    parser.add_argument('--userType', type=str, default='0')
-    parser.add_argument('--token', type=str, default='0')
+
 
     args = parser.parse_args()
     
-    version = args.version
+    version = "pvp"
     username = args.username
-    uuid = args.uuid
-    userType = args.userType
-    token = args.token
+    uuid = "0"
+    userType = "0"
+    token = "0"
 
     # download_and_run(version, username, uuid, userType, token)
     start_custom_version(version, "1.8.9", username)
